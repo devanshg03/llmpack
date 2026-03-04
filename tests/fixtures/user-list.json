@@ -1,0 +1,12 @@
+[
+  {"id": 1, "name": "Alice Smith", "role": "admin", "active": true},
+  {"id": 2, "name": "Bob Jones", "role": "editor", "active": true},
+  {"id": 3, "name": "Carol White", "role": "viewer", "active": false},
+  {"id": 4, "name": "Dave Brown", "role": "editor", "active": true},
+  {"id": 5, "name": "Eve Davis", "role": "admin", "active": true},
+  {"id": 6, "name": "Frank Miller", "role": "viewer", "active": false},
+  {"id": 7, "name": "Grace Wilson", "role": "editor", "active": true},
+  {"id": 8, "name": "Hank Moore", "role": "viewer", "active": false},
+  {"id": 9, "name": "Ivy Taylor", "role": "admin", "active": true},
+  {"id": 10, "name": "Jack Anderson", "role": "editor", "active": true}
+]

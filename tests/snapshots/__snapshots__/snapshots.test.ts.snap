@@ -1,0 +1,440 @@
+// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
+
+exports[`user-list × toon snapshot 1`] = `
+"[10,]{id,name,role,active}:
+1,Alice Smith,admin,true
+2,Bob Jones,editor,true
+3,Carol White,viewer,false
+4,Dave Brown,editor,true
+5,Eve Davis,admin,true
+6,Frank Miller,viewer,false
+7,Grace Wilson,editor,true
+8,Hank Moore,viewer,false
+9,Ivy Taylor,admin,true
+10,Jack Anderson,editor,true"
+`;
+
+exports[`user-list × yaml snapshot 1`] = `
+"- id: 1
+  name: Alice Smith
+  role: admin
+  active: true
+- id: 2
+  name: Bob Jones
+  role: editor
+  active: true
+- id: 3
+  name: Carol White
+  role: viewer
+  active: false
+- id: 4
+  name: Dave Brown
+  role: editor
+  active: true
+- id: 5
+  name: Eve Davis
+  role: admin
+  active: true
+- id: 6
+  name: Frank Miller
+  role: viewer
+  active: false
+- id: 7
+  name: Grace Wilson
+  role: editor
+  active: true
+- id: 8
+  name: Hank Moore
+  role: viewer
+  active: false
+- id: 9
+  name: Ivy Taylor
+  role: admin
+  active: true
+- id: 10
+  name: Jack Anderson
+  role: editor
+  active: true"
+`;
+
+exports[`user-list × csv snapshot 1`] = `
+"id,name,role,active
+1,Alice Smith,admin,true
+2,Bob Jones,editor,true
+3,Carol White,viewer,false
+4,Dave Brown,editor,true
+5,Eve Davis,admin,true
+6,Frank Miller,viewer,false
+7,Grace Wilson,editor,true
+8,Hank Moore,viewer,false
+9,Ivy Taylor,admin,true
+10,Jack Anderson,editor,true"
+`;
+
+exports[`user-list × tsv snapshot 1`] = `
+"id	name	role	active
+1	Alice Smith	admin	true
+2	Bob Jones	editor	true
+3	Carol White	viewer	false
+4	Dave Brown	editor	true
+5	Eve Davis	admin	true
+6	Frank Miller	viewer	false
+7	Grace Wilson	editor	true
+8	Hank Moore	viewer	false
+9	Ivy Taylor	admin	true
+10	Jack Anderson	editor	true"
+`;
+
+exports[`user-list × markdown-table snapshot 1`] = `
+"| id  | name          | role   | active |
+| --- | ------------- | ------ | ------ |
+| 1   | Alice Smith   | admin  | true   |
+| 2   | Bob Jones     | editor | true   |
+| 3   | Carol White   | viewer | false  |
+| 4   | Dave Brown    | editor | true   |
+| 5   | Eve Davis     | admin  | true   |
+| 6   | Frank Miller  | viewer | false  |
+| 7   | Grace Wilson  | editor | true   |
+| 8   | Hank Moore    | viewer | false  |
+| 9   | Ivy Taylor    | admin  | true   |
+| 10  | Jack Anderson | editor | true   |"
+`;
+
+exports[`config-object × yaml snapshot 1`] = `
+"appName: llmpack
+version: 1.0.0
+debug: false
+port: 3000
+host: localhost
+maxConnections: 100
+timeout: 30000
+logLevel: info
+apiKey: abc123xyz
+allowedOrigins: "https://example.com""
+`;
+
+exports[`product-catalog × toon snapshot 1`] = `
+"[8,]{id,name,price,category,specs}:
+1,Widget A,9.99,widgets,{"weight":"100g","dims":"10x5x2"}
+2,Widget B,14.99,widgets,{"weight":"150g","dims":"12x6x3"}
+3,Gadget X,49.99,gadgets,{"weight":"200g","dims":"15x8x4"}
+4,Gadget Y,79.99,gadgets,{"weight":"250g","dims":"18x10x5"}
+5,Doohickey,4.99,misc,{"weight":"50g","dims":"5x3x1"}
+6,Thingamajig,24.99,misc,{"weight":"175g","dims":"14x7x3"}
+7,Gizmo Pro,99.99,gadgets,{"weight":"300g","dims":"20x12x6"}
+8,Whatsit,34.99,widgets,{"weight":"125g","dims":"11x5x2"}"
+`;
+
+exports[`product-catalog × yaml snapshot 1`] = `
+"- id: 1
+  name: Widget A
+  price: 9.99
+  category: widgets
+  specs:
+    weight: 100g
+    dims: 10x5x2
+- id: 2
+  name: Widget B
+  price: 14.99
+  category: widgets
+  specs:
+    weight: 150g
+    dims: 12x6x3
+- id: 3
+  name: Gadget X
+  price: 49.99
+  category: gadgets
+  specs:
+    weight: 200g
+    dims: 15x8x4
+- id: 4
+  name: Gadget Y
+  price: 79.99
+  category: gadgets
+  specs:
+    weight: 250g
+    dims: 18x10x5
+- id: 5
+  name: Doohickey
+  price: 4.99
+  category: misc
+  specs:
+    weight: 50g
+    dims: 5x3x1
+- id: 6
+  name: Thingamajig
+  price: 24.99
+  category: misc
+  specs:
+    weight: 175g
+    dims: 14x7x3
+- id: 7
+  name: Gizmo Pro
+  price: 99.99
+  category: gadgets
+  specs:
+    weight: 300g
+    dims: 20x12x6
+- id: 8
+  name: Whatsit
+  price: 34.99
+  category: widgets
+  specs:
+    weight: 125g
+    dims: 11x5x2"
+`;
+
+exports[`product-catalog × csv snapshot 1`] = `
+"id,name,price,category,specs
+1,Widget A,9.99,widgets,"{""weight"":""100g"",""dims"":""10x5x2""}"
+2,Widget B,14.99,widgets,"{""weight"":""150g"",""dims"":""12x6x3""}"
+3,Gadget X,49.99,gadgets,"{""weight"":""200g"",""dims"":""15x8x4""}"
+4,Gadget Y,79.99,gadgets,"{""weight"":""250g"",""dims"":""18x10x5""}"
+5,Doohickey,4.99,misc,"{""weight"":""50g"",""dims"":""5x3x1""}"
+6,Thingamajig,24.99,misc,"{""weight"":""175g"",""dims"":""14x7x3""}"
+7,Gizmo Pro,99.99,gadgets,"{""weight"":""300g"",""dims"":""20x12x6""}"
+8,Whatsit,34.99,widgets,"{""weight"":""125g"",""dims"":""11x5x2""}""
+`;
+
+exports[`mixed-array × json-compact snapshot (via format) 1`] = `"[{"id":1},"foo",42,{"x":1,"y":2,"z":3}]"`;
+
+exports[`format(user-list) result snapshot 1`] = `
+{
+  "format": "toon",
+  "inputTokens": 150,
+  "output": 
+"[10,]{id,name,role,active}:
+1,Alice Smith,admin,true
+2,Bob Jones,editor,true
+3,Carol White,viewer,false
+4,Dave Brown,editor,true
+5,Eve Davis,admin,true
+6,Frank Miller,viewer,false
+7,Grace Wilson,editor,true
+8,Hank Moore,viewer,false
+9,Ivy Taylor,admin,true
+10,Jack Anderson,editor,true"
+,
+  "outputTokens": 72,
+  "tokensSaved": 52,
+}
+`;
+
+exports[`format(config-object) result snapshot 1`] = `
+{
+  "format": "yaml",
+  "inputTokens": 50,
+  "output": 
+"appName: llmpack
+version: 1.0.0
+debug: false
+port: 3000
+host: localhost
+maxConnections: 100
+timeout: 30000
+logLevel: info
+apiKey: abc123xyz
+allowedOrigins: "https://example.com""
+,
+  "outputTokens": 45,
+  "tokensSaved": 10,
+}
+`;
+
+exports[`user-list to toon snapshot 1`] = `
+"[10,]{id,name,role,active}:
+1,Alice Smith,admin,true
+2,Bob Jones,editor,true
+3,Carol White,viewer,false
+4,Dave Brown,editor,true
+5,Eve Davis,admin,true
+6,Frank Miller,viewer,false
+7,Grace Wilson,editor,true
+8,Hank Moore,viewer,false
+9,Ivy Taylor,admin,true
+10,Jack Anderson,editor,true"
+`;
+
+exports[`user-list to yaml snapshot 1`] = `
+"- id: 1
+  name: Alice Smith
+  role: admin
+  active: true
+- id: 2
+  name: Bob Jones
+  role: editor
+  active: true
+- id: 3
+  name: Carol White
+  role: viewer
+  active: false
+- id: 4
+  name: Dave Brown
+  role: editor
+  active: true
+- id: 5
+  name: Eve Davis
+  role: admin
+  active: true
+- id: 6
+  name: Frank Miller
+  role: viewer
+  active: false
+- id: 7
+  name: Grace Wilson
+  role: editor
+  active: true
+- id: 8
+  name: Hank Moore
+  role: viewer
+  active: false
+- id: 9
+  name: Ivy Taylor
+  role: admin
+  active: true
+- id: 10
+  name: Jack Anderson
+  role: editor
+  active: true"
+`;
+
+exports[`user-list to csv snapshot 1`] = `
+"id,name,role,active
+1,Alice Smith,admin,true
+2,Bob Jones,editor,true
+3,Carol White,viewer,false
+4,Dave Brown,editor,true
+5,Eve Davis,admin,true
+6,Frank Miller,viewer,false
+7,Grace Wilson,editor,true
+8,Hank Moore,viewer,false
+9,Ivy Taylor,admin,true
+10,Jack Anderson,editor,true"
+`;
+
+exports[`user-list to tsv snapshot 1`] = `
+"id	name	role	active
+1	Alice Smith	admin	true
+2	Bob Jones	editor	true
+3	Carol White	viewer	false
+4	Dave Brown	editor	true
+5	Eve Davis	admin	true
+6	Frank Miller	viewer	false
+7	Grace Wilson	editor	true
+8	Hank Moore	viewer	false
+9	Ivy Taylor	admin	true
+10	Jack Anderson	editor	true"
+`;
+
+exports[`user-list to markdown-table snapshot 1`] = `
+"| id  | name          | role   | active |
+| --- | ------------- | ------ | ------ |
+| 1   | Alice Smith   | admin  | true   |
+| 2   | Bob Jones     | editor | true   |
+| 3   | Carol White   | viewer | false  |
+| 4   | Dave Brown    | editor | true   |
+| 5   | Eve Davis     | admin  | true   |
+| 6   | Frank Miller  | viewer | false  |
+| 7   | Grace Wilson  | editor | true   |
+| 8   | Hank Moore    | viewer | false  |
+| 9   | Ivy Taylor    | admin  | true   |
+| 10  | Jack Anderson | editor | true   |"
+`;
+
+exports[`config-object to yaml snapshot 1`] = `
+"appName: llmpack
+version: 1.0.0
+debug: false
+port: 3000
+host: localhost
+maxConnections: 100
+timeout: 30000
+logLevel: info
+apiKey: abc123xyz
+allowedOrigins: "https://example.com""
+`;
+
+exports[`product-catalog to toon snapshot 1`] = `
+"[8,]{id,name,price,category,specs}:
+1,Widget A,9.99,widgets,{"weight":"100g","dims":"10x5x2"}
+2,Widget B,14.99,widgets,{"weight":"150g","dims":"12x6x3"}
+3,Gadget X,49.99,gadgets,{"weight":"200g","dims":"15x8x4"}
+4,Gadget Y,79.99,gadgets,{"weight":"250g","dims":"18x10x5"}
+5,Doohickey,4.99,misc,{"weight":"50g","dims":"5x3x1"}
+6,Thingamajig,24.99,misc,{"weight":"175g","dims":"14x7x3"}
+7,Gizmo Pro,99.99,gadgets,{"weight":"300g","dims":"20x12x6"}
+8,Whatsit,34.99,widgets,{"weight":"125g","dims":"11x5x2"}"
+`;
+
+exports[`product-catalog to yaml snapshot 1`] = `
+"- id: 1
+  name: Widget A
+  price: 9.99
+  category: widgets
+  specs:
+    weight: 100g
+    dims: 10x5x2
+- id: 2
+  name: Widget B
+  price: 14.99
+  category: widgets
+  specs:
+    weight: 150g
+    dims: 12x6x3
+- id: 3
+  name: Gadget X
+  price: 49.99
+  category: gadgets
+  specs:
+    weight: 200g
+    dims: 15x8x4
+- id: 4
+  name: Gadget Y
+  price: 79.99
+  category: gadgets
+  specs:
+    weight: 250g
+    dims: 18x10x5
+- id: 5
+  name: Doohickey
+  price: 4.99
+  category: misc
+  specs:
+    weight: 50g
+    dims: 5x3x1
+- id: 6
+  name: Thingamajig
+  price: 24.99
+  category: misc
+  specs:
+    weight: 175g
+    dims: 14x7x3
+- id: 7
+  name: Gizmo Pro
+  price: 99.99
+  category: gadgets
+  specs:
+    weight: 300g
+    dims: 20x12x6
+- id: 8
+  name: Whatsit
+  price: 34.99
+  category: widgets
+  specs:
+    weight: 125g
+    dims: 11x5x2"
+`;
+
+exports[`product-catalog to csv snapshot 1`] = `
+"id,name,price,category,specs
+1,Widget A,9.99,widgets,"{""weight"":""100g"",""dims"":""10x5x2""}"
+2,Widget B,14.99,widgets,"{""weight"":""150g"",""dims"":""12x6x3""}"
+3,Gadget X,49.99,gadgets,"{""weight"":""200g"",""dims"":""15x8x4""}"
+4,Gadget Y,79.99,gadgets,"{""weight"":""250g"",""dims"":""18x10x5""}"
+5,Doohickey,4.99,misc,"{""weight"":""50g"",""dims"":""5x3x1""}"
+6,Thingamajig,24.99,misc,"{""weight"":""175g"",""dims"":""14x7x3""}"
+7,Gizmo Pro,99.99,gadgets,"{""weight"":""300g"",""dims"":""20x12x6""}"
+8,Whatsit,34.99,widgets,"{""weight"":""125g"",""dims"":""11x5x2""}""
+`;
+
+exports[`mixed-array to json-compact snapshot (via format) 1`] = `"[{"id":1},"foo",42,{"x":1,"y":2,"z":3}]"`;

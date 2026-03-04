@@ -1,0 +1,10 @@
+[
+  {"id": 1, "name": "Widget A", "price": 9.99, "category": "widgets", "specs": {"weight": "100g", "dims": "10x5x2"}},
+  {"id": 2, "name": "Widget B", "price": 14.99, "category": "widgets", "specs": {"weight": "150g", "dims": "12x6x3"}},
+  {"id": 3, "name": "Gadget X", "price": 49.99, "category": "gadgets", "specs": {"weight": "200g", "dims": "15x8x4"}},
+  {"id": 4, "name": "Gadget Y", "price": 79.99, "category": "gadgets", "specs": {"weight": "250g", "dims": "18x10x5"}},
+  {"id": 5, "name": "Doohickey", "price": 4.99, "category": "misc", "specs": {"weight": "50g", "dims": "5x3x1"}},
+  {"id": 6, "name": "Thingamajig", "price": 24.99, "category": "misc", "specs": {"weight": "175g", "dims": "14x7x3"}},
+  {"id": 7, "name": "Gizmo Pro", "price": 99.99, "category": "gadgets", "specs": {"weight": "300g", "dims": "20x12x6"}},
+  {"id": 8, "name": "Whatsit", "price": 34.99, "category": "widgets", "specs": {"weight": "125g", "dims": "11x5x2"}}
+]

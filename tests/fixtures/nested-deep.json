@@ -1,0 +1,19 @@
+{
+  "level1": {
+    "level2": {
+      "level3": {
+        "level4": {
+          "value": "deep value",
+          "count": 42
+        },
+        "sibling": "level3 sibling"
+      },
+      "data": "level2 data"
+    },
+    "meta": {
+      "created": "2024-01-01",
+      "updated": "2024-06-15"
+    }
+  },
+  "root": "top level"
+}
