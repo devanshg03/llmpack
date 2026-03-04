@@ -221,6 +221,27 @@ const result = await format(products, { flatten: true });
 
 ---
 
+## Benchmarks
+
+Measured on a 1000-row array (Bun 1.3.10, Apple Silicon):
+
+| Operation | Time |
+|---|---|
+| `format()` | ~10ms |
+| `compare()` | ~11ms |
+| `detect()` | < 2ms |
+
+Token savings vs raw JSON across real-world fixture data:
+
+| Fixture | Format | Savings |
+|---|---|---|
+| User list (uniform array, 10 rows) | TOON | **52%** |
+| Log entries (uniform array, 500 rows) | TOON | **48%** |
+| Product catalog (nested, flattened) | TOON | **39%** |
+| Config object (flat key-value) | YAML | 10% |
+
+---
+
 ## Development
 
 ```bash
