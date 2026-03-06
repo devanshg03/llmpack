@@ -23,7 +23,7 @@ const users = [
 const result = await format(users);
 
 console.log(result.output);
-// [3,]{id,name,role,active}:
+// [3]{id,name,role,active}:
 // 1,Alice,admin,true
 // 2,Bob,editor,true
 // 3,Carol,viewer,false
@@ -40,7 +40,7 @@ Auto-detects shape, picks the best format, returns the result.
 
 ```ts
 const result = await format(data, {
-  as?: "toon" | "yaml" | "csv" | "tsv" | "markdown-table" | "json-compact",
+  as?: "toon" | "yaml" | "csv" | "tsv" | "markdown-table" | "json-compact" | "hybrid",
   tokenizer?: "estimate" | "tiktoken",  // default: "estimate"
   maxDepth?: number,                    // default: 2
   flatten?: boolean,                    // default: false
@@ -133,18 +133,28 @@ toMarkdownTable(data, options?)
 
 ## Output Formats
 
-### TOON (Token-Optimized Object Notation)
+### TOON (Token-Oriented Object Notation)
 
-The most compact format for uniform arrays of objects. Header encodes row count and column names; rows are bare comma-separated values.
+The most compact format for structured data. Handles both arrays and objects natively.
 
+**Uniform array** — header encodes row count and field names once; rows are bare values:
 ```
-[3,]{id,name,role,active}:
+[3]{id,name,role,active}:
 1,Alice,admin,true
 2,Bob,editor,true
 3,Carol,viewer,false
 ```
 
-Best for: large uniform datasets (log entries, user lists, query results).
+**Object with nested table** — scalars as `key: value`, arrays as inline headers:
+```
+title: Q1 Metrics
+metrics[3]{date,views,clicks}:
+  2025-01-01,6138,174
+  2025-01-02,4616,274
+  2025-01-03,4460,143
+```
+
+Best for: uniform arrays, objects containing tabular data, composite profiles.
 
 ### YAML
 
@@ -191,12 +201,16 @@ Best for: data being rendered directly in markdown (e.g. in a chat UI).
 | Input shape | Condition | Format |
 |---|---|---|
 | Primitive / null | — | `json-compact` |
-| Object | depth ≤ `maxDepth` | `yaml` |
-| Object | depth > `maxDepth` | `yaml` |
+| Object | shallow flat scalars only | `yaml` |
+| Object | has uniform array field(s) | `toon` |
+| Object | composite: deeply nested fields (depth > 3) | `hybrid` |
+| Object | composite: few complex sections (≤ 3 non-scalar fields) | `hybrid` |
+| Object | composite: many complex sections | `toon` |
 | Empty array | — | `toon` |
 | Array of primitives | — | `csv` |
-| Array of objects + primitives | — | `json-compact` |
-| Array of objects | uniformity ≥ 0.85 | `toon` |
+| Array of objects + primitives | — | `toon` |
+| Array of objects | uniformity ≥ 0.85, no array columns | `toon` |
+| Array of objects | uniformity ≥ 0.85, has array columns | `hybrid` |
 | Array of objects | uniformity 0.50–0.84 | `yaml` |
 | Array of objects | uniformity < 0.50 | `json-compact` |
 
@@ -215,7 +229,7 @@ const products = [
 
 const result = await format(products, { flatten: true });
 // Detects as tabular after flattening:
-// [1,]{id,name,specs.weight,specs.dims}:
+// [1]{id,name,specs.weight,specs.dims}:
 // 1,Widget,100g,10x5
 ```
 
@@ -223,22 +237,22 @@ const result = await format(products, { flatten: true });
 
 ## Benchmarks
 
-Measured on a 1000-row array (Bun 1.3.10, Apple Silicon):
-
-| Operation | Time |
-|---|---|
-| `format()` | ~10ms |
-| `compare()` | ~11ms |
-| `detect()` | < 2ms |
-
-Token savings vs raw JSON across real-world fixture data:
+Measured on Bun 1.3.10, Apple Silicon. Selected highlights:
 
 | Fixture | Format | Savings |
 |---|---|---|
-| User list (uniform array, 10 rows) | TOON | **52%** |
-| Log entries (uniform array, 500 rows) | TOON | **48%** |
-| Product catalog (nested, flattened) | TOON | **39%** |
+| User list (uniform array) | TOON | **53%** |
+| Time-series analytics (object + table) | TOON | **51%** |
+| Log entries (500 rows) | TOON | **48%** |
+| GitHub repos (25 repos) | TOON | **38%** |
+| Product catalog (flattened) | TOON | **39%** |
+| LinkedIn profile (composite object) | TOON | **31%** |
+| LinkedIn posts (array + nested cols) | hybrid | **13%** |
 | Config object (flat key-value) | YAML | 10% |
+| Search API response (exa) | hybrid | 4% |
+| Deeply nested composite | hybrid | 4% |
+
+`format()` runs in ~10ms on a 1000-row array. See [docs/BENCHMARKS.md](./docs/BENCHMARKS.md) for full results across all fixtures.
 
 ---
 

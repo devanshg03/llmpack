@@ -5,9 +5,17 @@
   "keywords": ["llm", "tokens", "format", "prompt", "ai", "csv", "yaml", "toon"],
   "license": "MIT",
   "type": "module",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
   "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devanshg03/llmpack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devanshg03/llmpack/issues"
+  },
+  "homepage": "https://github.com/devanshg03/llmpack#readme",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

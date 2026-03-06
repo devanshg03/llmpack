@@ -3,6 +3,7 @@ import { flattenObject } from "./flatten.ts";
 import {
   detect as detectShape,
   type DetectionResult,
+  type FieldClass,
   type InputShape,
   type OutputFormat,
 } from "./detect.ts";
@@ -11,8 +12,9 @@ import { toYaml } from "./formatters/yaml.ts";
 import { toCsv } from "./formatters/csv.ts";
 import { toTsv } from "./formatters/tsv.ts";
 import { toMarkdownTable } from "./formatters/markdown-table.ts";
+import { toHybrid } from "./formatters/hybrid.ts";
 
-export type { InputShape, OutputFormat, DetectionResult };
+export type { InputShape, OutputFormat, DetectionResult, FieldClass };
 
 export interface FormatOptions {
   as?: OutputFormat;
@@ -21,6 +23,7 @@ export interface FormatOptions {
   flatten?: boolean;
   report?: boolean;
   delimiter?: "," | "\t" | "|";
+  omitNull?: boolean;
 }
 
 export interface FormatReport {
@@ -49,13 +52,14 @@ export interface ComparisonResult {
 function applyFormatter(
   data: unknown,
   format: OutputFormat,
-  delimiter?: "," | "\t" | "|"
+  delimiter?: "," | "\t" | "|",
+  omitNull?: boolean
 ): string {
   switch (format) {
     case "toon":
       return toToon(data, { delimiter });
     case "yaml":
-      return toYaml(data);
+      return toYaml(data, { omitNull });
     case "csv":
       return toCsv(data, { delimiter });
     case "tsv":
@@ -64,6 +68,8 @@ function applyFormatter(
       return toMarkdownTable(data);
     case "json-compact":
       return JSON.stringify(data);
+    case "hybrid":
+      return toHybrid(data);
   }
 }
 
@@ -90,7 +96,7 @@ export async function format(
   const detection = detectShape(processedData, maxDepth);
   const chosenFormat = opts?.as ?? detection.recommendedFormat;
 
-  const output = applyFormatter(processedData, chosenFormat, opts?.delimiter);
+  const output = applyFormatter(processedData, chosenFormat, opts?.delimiter, opts?.omitNull);
   const outputTokens = await countTokens(output, tokenizerMode);
   const rawSavings = Math.round((1 - outputTokens / inputTokens) * 100);
   const tokensSaved = Math.max(0, rawSavings);
@@ -130,6 +136,7 @@ export async function compare(data: unknown): Promise<ComparisonResult[]> {
     "tsv",
     "markdown-table",
     "json-compact",
+    "hybrid",
   ];
 
   const results: ComparisonResult[] = [];
@@ -159,7 +166,7 @@ export async function compare(data: unknown): Promise<ComparisonResult[]> {
   return results.sort((a, b) => a.tokens - b.tokens);
 }
 
-export { toToon, toYaml, toCsv, toTsv, toMarkdownTable };
+export { toToon, toYaml, toCsv, toTsv, toMarkdownTable, toHybrid };
 export { estimateTokens, countTokens } from "./tokenizer.ts";
 export { flattenObject } from "./flatten.ts";
 export { getDepth, getUniformityScore } from "./detect.ts";

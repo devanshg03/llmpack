@@ -79,10 +79,10 @@ test("detect: array of primitives → primitive-array → csv", () => {
   expect(r.recommendedFormat).toBe("csv");
 });
 
-test("detect: mixed array (objects + primitives) → mixed → json-compact", () => {
+test("detect: mixed array (objects + primitives) → mixed → toon", () => {
   const r = detect([{ id: 1 }, "foo", 42]);
   expect(r.shape).toBe("mixed");
-  expect(r.recommendedFormat).toBe("json-compact");
+  expect(r.recommendedFormat).toBe("toon");
 });
 
 test("detect: uniform array (score ≥ 0.85) → tabular → toon", () => {

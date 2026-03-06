@@ -5,15 +5,14 @@ test("empty array → empty string", () => {
   expect(toToon([])).toBe("");
 });
 
-test("throws on non-array input", () => {
-  expect(() => toToon({ a: 1 })).toThrow();
-  expect(() => toToon("hello")).toThrow();
+test("empty object → empty string", () => {
+  expect(toToon({})).toBe("");
 });
 
 test("single-item array → correct header + one row", () => {
   const result = toToon([{ id: 1, name: "Alice" }]);
   const lines = result.split("\n");
-  expect(lines[0]).toBe("[1,]{id,name}:");
+  expect(lines[0]).toBe("[1]{id,name}:");
   expect(lines[1]).toBe("1,Alice");
 });
 
@@ -24,7 +23,7 @@ test("uniform array → correct tabular output", () => {
   ];
   const result = toToon(data);
   const lines = result.split("\n");
-  expect(lines[0]).toBe("[2,]{id,name}:");
+  expect(lines[0]).toBe("[2]{id,name}:");
   expect(lines[1]).toBe("1,Alice");
   expect(lines[2]).toBe("2,Bob");
 });
@@ -50,11 +49,19 @@ test("null values → empty string", () => {
   expect(lines[1]).toBe(",1");
 });
 
-test("nested object values → JSON.stringify", () => {
+test("nested single-key object values → inline scalar", () => {
   const data = [{ id: 1, meta: { x: 1 } }];
   const result = toToon(data);
   const lines = result.split("\n");
-  expect(lines[1]).toContain(JSON.stringify({ x: 1 }));
+  // single-key object {x:1} inlines to just "1"
+  expect(lines[1]).toBe("1,1");
+});
+
+test("nested multi-key object values → JSON.stringify", () => {
+  const data = [{ id: 1, meta: { x: 1, y: 2 } }];
+  const result = toToon(data);
+  const lines = result.split("\n");
+  expect(lines[1]).toContain(JSON.stringify({ x: 1, y: 2 }));
 });
 
 test("boolean values", () => {
@@ -73,6 +80,31 @@ test("custom delimiter", () => {
   const result = toToon([{ a: 1, b: 2 }], { delimiter: "|" });
   const lines = result.split("\n");
   expect(lines[1]).toBe("1|2");
+});
+
+test("flat object → key: value lines", () => {
+  const result = toToon({ name: "Alice", age: 30, active: true });
+  expect(result).toBe("name: Alice\nage: 30\nactive: true");
+});
+
+test("object with uniform tabular array field → TOON nested table", () => {
+  const result = toToon({
+    metrics: [
+      { date: "2025-01-01", views: 100 },
+      { date: "2025-01-02", views: 200 },
+    ],
+  });
+  const lines = result.split("\n");
+  expect(lines[0]).toBe("metrics[2]{date,views}:");
+  expect(lines[1]).toBe("  2025-01-01,100");
+  expect(lines[2]).toBe("  2025-01-02,200");
+});
+
+test("object with scalar and array fields", () => {
+  const result = toToon({ title: "Report", items: [1, 2, 3] });
+  const lines = result.split("\n");
+  expect(lines[0]).toBe("title: Report");
+  expect(lines[1]).toBe("items[3]: 1,2,3");
 });
 
 test("1000-row array completes in < 500ms", () => {

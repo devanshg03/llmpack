@@ -4,8 +4,8 @@ import userList from "../fixtures/user-list.json";
 
 test("returns array with all format entries", async () => {
   const results = await compare(userList);
-  // 6 formatters + json baseline = 7
-  expect(results.length).toBe(7);
+  // 7 formatters + json baseline = 8
+  expect(results.length).toBe(8);
 });
 
 test("sorted ascending by tokens", async () => {

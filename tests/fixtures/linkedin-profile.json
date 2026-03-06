@@ -1,0 +1,644 @@
+{
+  "id": "ACoAAEk-ZbcBVPk9fDWpoYTMTnWwdlgwxYWCAls",
+  "about": "Hey! I'm Armand! \n\nI passed my first bill at 18. Spent my youth doing grassroots advocacy for my first-generation immigrant community in Nevada. Became the youngest appointee to sit on government councils advising the Governor on policy decisions that later became law.\n\nNow I'm spending my time building Fed10 to handle the painful parts of government affairs, empowering government affairs teams to spend more time passing legislation!\n\nCheck us out: www.fed10.ai",
+  "photo": "https://media.licdn.com/dms/image/v2/D5603AQHE8TRANQPyVA/profile-displayphoto-shrink_800_800/B56ZXklGLEGUAc-/0/1743296685131?e=1774483200&v=beta&t=map0R6t5Xb0eIyfoO0ne3bwD_NqvsJHmteEa_pNXvRs",
+  "causes": [],
+  "hiring": false,
+  "skills": [
+    {
+      "name": "Political Advocacy"
+    }
+  ],
+  "courses": [],
+  "patents": [],
+  "premium": true,
+  "featured": {
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7420535869826232320?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7420535869826232320%29",
+    "images": [
+      "https://media.licdn.com/dms/image/v2/D5622AQE3vk4CJgjv_g/feedshare-shrink_1280/B56ZvsKDMcKkAc-/0/1769193616398?e=1774483200&v=beta&t=lQkb5MA7hwsRtROPul_2NoolrovUCETQCKN53bGA8Ow"
+    ],
+    "slides": [
+      {
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7420535869826232320?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7420535869826232320%29",
+        "image": {
+          "url": "https://media.licdn.com/dms/image/v2/D5622AQE3vk4CJgjv_g/feedshare-shrink_1280/B56ZvsKDMcKkAc-/0/1769193616398?e=1774483200&v=beta&t=lQkb5MA7hwsRtROPul_2NoolrovUCETQCKN53bGA8Ow"
+        },
+        "title": null,
+        "subtitle": null,
+        "description": null
+      },
+      {
+        "url": "https://fed10.ai/",
+        "image": {
+          "url": "https://media.licdn.com/dms/image/v2/D562DAQHO_Ifv0gvLdQ/profile-treasury-image-shrink_8192_8192/B56Zvxy7X3J8Ag-/0/1769288218589?e=1773280800&v=beta&t=9qPkdxkpT0Oyv6wfziGE0EgcBiwEuNrNNOCwqONKWLk"
+        },
+        "title": "Fed10 - Legislative Intelligence for Your Business",
+        "subtitle": "Fed10",
+        "description": null
+      }
+    ]
+  },
+  "headline": "Government Affairs | Co-founder at Fed10 (YC W26) | Prev. Government at Harvard",
+  "lastName": "Iorgulescu",
+  "location": {
+    "parsed": {
+      "city": "Washington",
+      "text": "Washington, DC, United States",
+      "state": "District of Columbia",
+      "country": "United States",
+      "regionCode": null,
+      "countryCode": "US",
+      "countryFull": "United States of America"
+    },
+    "countryCode": "US",
+    "linkedinText": "Washington, District of Columbia, United States"
+  },
+  "projects": [],
+  "services": null,
+  "verified": true,
+  "education": [
+    {
+      "degree": "Bachelor of Arts - BA",
+      "period": "2025",
+      "skills": [],
+      "endDate": {
+        "text": "2025",
+        "year": 2025
+      },
+      "insights": "Activities and societies: Institute of Politics GovLab",
+      "schoolId": "1646",
+      "startDate": null,
+      "schoolLogo": {
+        "url": "https://media.licdn.com/dms/image/v2/C4E0BAQF5t62bcL0e9g/company-logo_400_400/company-logo_400_400/0/1631318058235?e=1774483200&v=beta&t=Q3Xcnoq3Lkr-h9pu0OaYr6VgA2LNVwRn1hG1pWEA43E",
+        "sizes": [
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C4E0BAQF5t62bcL0e9g/company-logo_400_400/company-logo_400_400/0/1631318058235?e=1774483200&v=beta&t=Q3Xcnoq3Lkr-h9pu0OaYr6VgA2LNVwRn1hG1pWEA43E",
+            "width": 400,
+            "height": 400,
+            "expiresAt": 1774483200000
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C4E0BAQF5t62bcL0e9g/company-logo_200_200/company-logo_200_200/0/1631318058235?e=1774483200&v=beta&t=1Hqn08nwIq2Rc8P7O5_4o3qnosHdnEDXlrMwanuHKpA",
+            "width": 200,
+            "height": 200,
+            "expiresAt": 1774483200000
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C4E0BAQF5t62bcL0e9g/company-logo_100_100/company-logo_100_100/0/1631318058235?e=1774483200&v=beta&t=lczI9mPTuWPmZeDID_VGFOf4YNaAUU5KTKSbudDIRtk",
+            "width": 100,
+            "height": 100,
+            "expiresAt": 1774483200000
+          }
+        ]
+      },
+      "schoolName": "Harvard University",
+      "fieldOfStudy": "Government & Computer Science",
+      "schoolLinkedinUrl": "https://www.linkedin.com/company/1646/"
+    },
+    {
+      "degree": "W26",
+      "skills": [],
+      "endDate": {
+        "text": ""
+      },
+      "schoolId": "167872",
+      "startDate": null,
+      "schoolLogo": {
+        "url": "https://media.licdn.com/dms/image/v2/C4D0BAQGPzdBPNxrmEg/company-logo_400_400/company-logo_400_400/0/1673555093250/y_combinator_logo?e=1774483200&v=beta&t=bWQtVPT58E7WTwWWnN_6glXXZFsyEYi8mTyZSc6vW4Y",
+        "sizes": [
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C4D0BAQGPzdBPNxrmEg/company-logo_400_400/company-logo_400_400/0/1673555093250/y_combinator_logo?e=1774483200&v=beta&t=bWQtVPT58E7WTwWWnN_6glXXZFsyEYi8mTyZSc6vW4Y",
+            "width": 400,
+            "height": 400,
+            "expiresAt": 1774483200000
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C4D0BAQGPzdBPNxrmEg/company-logo_200_200/company-logo_200_200/0/1673555093250/y_combinator_logo?e=1774483200&v=beta&t=nqJoZgwHee9Ab3VDO1flOqwmI7Un9TtOKH3rz1TLD2s",
+            "width": 200,
+            "height": 200,
+            "expiresAt": 1774483200000
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C4D0BAQGPzdBPNxrmEg/company-logo_100_100/company-logo_100_100/0/1673555093250/y_combinator_logo?e=1774483200&v=beta&t=9OwxM-OH5jdBo8YYy7Jj2vO_jWjT_a1MfUAPiPhPvMw",
+            "width": 100,
+            "height": 100,
+            "expiresAt": 1774483200000
+          }
+        ]
+      },
+      "schoolName": "Y Combinator",
+      "fieldOfStudy": null,
+      "schoolLinkedinUrl": "https://www.linkedin.com/company/167872/"
+    }
+  ],
+  "firstName": "Armand",
+  "languages": [],
+  "objectUrn": "1228826039",
+  "topSkills": null,
+  "experience": [
+    {
+      "skills": null,
+      "endDate": {
+        "text": "Present"
+      },
+      "duration": "8 mos",
+      "location": null,
+      "position": "Co-Founder & CEO",
+      "companyId": "108147781",
+      "startDate": {
+        "text": "Aug 2025",
+        "year": 2025,
+        "month": "Aug"
+      },
+      "companyLogo": {
+        "url": "https://media.licdn.com/dms/image/v2/D560BAQHi2MsB9MhaHg/company-logo_400_400/B56ZufMAgdKwAY-/0/1767902284126/fed10_logo?e=1774483200&v=beta&t=Pj3OwlWgO27Iq8BAtN76tfu7hiZtTDrNJCKcWz_WudU",
+        "sizes": [
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D560BAQHi2MsB9MhaHg/company-logo_400_400/B56ZufMAgdKwAY-/0/1767902284126/fed10_logo?e=1774483200&v=beta&t=Pj3OwlWgO27Iq8BAtN76tfu7hiZtTDrNJCKcWz_WudU",
+            "width": 400,
+            "height": 400,
+            "expiresAt": 1774483200000
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D560BAQHi2MsB9MhaHg/company-logo_200_200/B56ZufMAgdKwAI-/0/1767902284126/fed10_logo?e=1774483200&v=beta&t=O8PmtMYZBiAlafWFNP1u743GxoaFyHJsvHKnehyrA1c",
+            "width": 200,
+            "height": 200,
+            "expiresAt": 1774483200000
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D560BAQHi2MsB9MhaHg/company-logo_100_100/B56ZufMAgdKwAQ-/0/1767902284126/fed10_logo?e=1774483200&v=beta&t=j6wDiWzDQWUfgwPNEMQFX3X625tySjPfkONSVZQr75k",
+            "width": 100,
+            "height": 100,
+            "expiresAt": 1774483200000
+          }
+        ]
+      },
+      "companyName": "Fed10",
+      "description": "We help government affairs teams stay ahead of legislative noise so they can spend more time shaking hands and less time behind a screen.\n\nBacked by the investors behind Airbnb, DoorDash, and Stripe",
+      "workplaceType": null,
+      "employmentType": null,
+      "companyLinkedinUrl": "https://www.linkedin.com/company/fed10/",
+      "companyUniversalName": "fed10"
+    },
+    {
+      "skills": null,
+      "endDate": {
+        "text": "Aug 2025",
+        "year": 2025,
+        "month": "Aug"
+      },
+      "duration": "1 yr 1 mo",
+      "location": null,
+      "position": "Government Affairs Analyst",
+      "companyId": "283413",
+      "startDate": {
+        "text": "Aug 2024",
+        "year": 2024,
+        "month": "Aug"
+      },
+      "companyLogo": {
+        "url": "https://media.licdn.com/dms/image/v2/D560BAQGL0XR-te4HtQ/company-logo_400_400/company-logo_400_400/0/1729696255068/uwsn_logo?e=1774483200&v=beta&t=8kP9lTqkgO4LxIamhX3PdNXRMYT-oD8JgBYEVb8ifpY",
+        "sizes": [
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D560BAQGL0XR-te4HtQ/company-logo_400_400/company-logo_400_400/0/1729696255068/uwsn_logo?e=1774483200&v=beta&t=8kP9lTqkgO4LxIamhX3PdNXRMYT-oD8JgBYEVb8ifpY",
+            "width": 400,
+            "height": 400,
+            "expiresAt": 1774483200000
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D560BAQGL0XR-te4HtQ/company-logo_200_200/company-logo_200_200/0/1729696255068/uwsn_logo?e=1774483200&v=beta&t=D9iOV-8kPkD08RDMibfmGjxikpv0Uextl_STx5qklkc",
+            "width": 200,
+            "height": 200,
+            "expiresAt": 1774483200000
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D560BAQGL0XR-te4HtQ/company-logo_100_100/company-logo_100_100/0/1729696255068/uwsn_logo?e=1774483200&v=beta&t=Wh5Xg1EbeGk6vN790XO6R0_qBUErkeq0CF93u7l67sQ",
+            "width": 100,
+            "height": 100,
+            "expiresAt": 1774483200000
+          }
+        ]
+      },
+      "companyName": "United Way of Southern Nevada",
+      "description": "Lobbied and passed AB367 in Nevada's 83rd Legislature. Ran coalition strategy, managed stakeholder relationships, and worked the committee process from introduction to the governor's desk. Expanded voting access for 244,000 limited-English-proficient (LEP) Nevadans.",
+      "workplaceType": null,
+      "employmentType": null,
+      "companyLinkedinUrl": "https://www.linkedin.com/company/283413/"
+    },
+    {
+      "skills": null,
+      "endDate": {
+        "text": "Jul 2025",
+        "year": 2025,
+        "month": "Jul"
+      },
+      "duration": "9 mos",
+      "location": null,
+      "position": "Financial Literacy Advisory Councilmember",
+      "companyId": "18165039",
+      "startDate": {
+        "text": "Nov 2024",
+        "year": 2024,
+        "month": "Nov"
+      },
+      "companyLogo": {
+        "url": "https://media.licdn.com/dms/image/v2/D560BAQHtkj7Y4YBLMQ/company-logo_400_400/company-logo_400_400/0/1699506430271/nevada_department_of_education_nevada_ready_logo?e=1774483200&v=beta&t=tVwM-vARELCPPmmKCV8XVpjhuaATWAmXNhkG11le4K0",
+        "sizes": [
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D560BAQHtkj7Y4YBLMQ/company-logo_400_400/company-logo_400_400/0/1699506430271/nevada_department_of_education_nevada_ready_logo?e=1774483200&v=beta&t=tVwM-vARELCPPmmKCV8XVpjhuaATWAmXNhkG11le4K0",
+            "width": 400,
+            "height": 400,
+            "expiresAt": 1774483200000
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D560BAQHtkj7Y4YBLMQ/company-logo_200_200/company-logo_200_200/0/1699506430271/nevada_department_of_education_nevada_ready_logo?e=1774483200&v=beta&t=Y2BbtHe3zWNqFgj2Xq8tnHhX4SiB7C8C8JSU_tKb96s",
+            "width": 200,
+            "height": 200,
+            "expiresAt": 1774483200000
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/D560BAQHtkj7Y4YBLMQ/company-logo_100_100/company-logo_100_100/0/1699506430271/nevada_department_of_education_nevada_ready_logo?e=1774483200&v=beta&t=IcwuE6U54gqbo_F1xj8viTPT-AwZdX3dVgbBv1ldVhw",
+            "width": 100,
+            "height": 100,
+            "expiresAt": 1774483200000
+          }
+        ]
+      },
+      "companyName": "Nevada Department of Education",
+      "description": "Appointed by Governor Lombardo to advise statewide K-12 financial literacy reform. Drafted policy recommendations for AB289 and lobbied legislators to build bipartisan support. AB289 was signed into law, impacting 100,000+ college students annually.",
+      "workplaceType": null,
+      "employmentType": null,
+      "companyLinkedinUrl": "https://www.linkedin.com/company/18165039/"
+    },
+    {
+      "skills": null,
+      "endDate": {
+        "text": "Jul 2024",
+        "year": 2024,
+        "month": "Jul"
+      },
+      "duration": "1 mo",
+      "location": null,
+      "position": "Boys Nation Senator",
+      "companyId": "41306",
+      "startDate": {
+        "text": "Jul 2024",
+        "year": 2024,
+        "month": "Jul"
+      },
+      "companyLogo": {
+        "url": "https://media.licdn.com/dms/image/v2/C4E0BAQHDyA6DYH5okA/company-logo_400_400/company-logo_400_400/0/1631800221267/the_american_legion_logo?e=1774483200&v=beta&t=F46LIgbO0SNV6AxgVPNol6AVnwi_FtUP_2YVtrHN_2Q",
+        "sizes": [
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C4E0BAQHDyA6DYH5okA/company-logo_400_400/company-logo_400_400/0/1631800221267/the_american_legion_logo?e=1774483200&v=beta&t=F46LIgbO0SNV6AxgVPNol6AVnwi_FtUP_2YVtrHN_2Q",
+            "width": 400,
+            "height": 400,
+            "expiresAt": 1774483200000
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C4E0BAQHDyA6DYH5okA/company-logo_200_200/company-logo_200_200/0/1631800221267/the_american_legion_logo?e=1774483200&v=beta&t=ZpBMI6YuZwQuXgeTbxHjJ257eYh0CAXRyCauXZDJNTI",
+            "width": 200,
+            "height": 200,
+            "expiresAt": 1774483200000
+          },
+          {
+            "url": "https://media.licdn.com/dms/image/v2/C4E0BAQHDyA6DYH5okA/company-logo_100_100/company-logo_100_100/0/1631800221267/the_american_legion_logo?e=1774483200&v=beta&t=ZQOEhbGm-f7KPDCyJ7WouGWh_-prfUNzXcWfjzQKR-s",
+            "width": 100,
+            "height": 100,
+            "expiresAt": 1774483200000
+          }
+        ]
+      },
+      "companyName": "The American Legion",
+      "description": "100/20,000+ nationwide",
+      "workplaceType": null,
+      "employmentType": null,
+      "companyLinkedinUrl": "https://www.linkedin.com/company/41306/"
+    }
+  ],
+  "influencer": false,
+  "openToWork": false,
+  "linkedinUrl": "https://www.linkedin.com/in/armand-iorgulescu",
+  "coverPicture": {
+    "url": "https://media.licdn.com/dms/image/v2/D5616AQEKVdKDvLuxwQ/profile-displaybackgroundimage-shrink_350_1400/B56ZskKl_9HsAc-/0/1765838315945?e=1774483200&v=beta&t=Uri5mOGWEQ6WXpHzh-twl8BO19JE4nQtXrRQx0yuilM",
+    "sizes": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5616AQEKVdKDvLuxwQ/profile-displaybackgroundimage-shrink_350_1400/B56ZskKl_9HsAc-/0/1765838315945?e=1774483200&v=beta&t=Uri5mOGWEQ6WXpHzh-twl8BO19JE4nQtXrRQx0yuilM",
+        "width": 1400,
+        "height": 350,
+        "expiresAt": 1774483200000
+      },
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5616AQEKVdKDvLuxwQ/profile-displaybackgroundimage-shrink_200_800/B56ZskKl_9HsAY-/0/1765838315945?e=1774483200&v=beta&t=8oeHhkkUb1koawVSmj7KFPXSjbumQSchH7cokNvlUmE",
+        "width": 800,
+        "height": 200,
+        "expiresAt": 1774483200000
+      }
+    ]
+  },
+  "memorialized": false,
+  "moreProfiles": [
+    {
+      "id": "ACoAAC4aZ84BWGb6NwKZLKe-US5HaWwxwX-O2OI",
+      "lastName": "Brisset",
+      "firstName": "Oscar",
+      "linkedinUrl": "https://www.linkedin.com/in/oscarbrisset",
+      "publicIdentifier": "oscarbrisset"
+    },
+    {
+      "id": "ACoAADkgPz8BimA1ZsDZRa8OxF7kWYdblpYPlj8",
+      "lastName": "Islam",
+      "firstName": "Zayan",
+      "linkedinUrl": "https://www.linkedin.com/in/drowsy",
+      "publicIdentifier": "drowsy"
+    },
+    {
+      "id": "ACoAAEu6rLgBaJUPfblnLlnSoNwhDMYCw-CbCIw",
+      "lastName": "Wessman",
+      "firstName": "Markus",
+      "linkedinUrl": "https://www.linkedin.com/in/markus-wessman-7085b52b5",
+      "publicIdentifier": "markus-wessman-7085b52b5"
+    },
+    {
+      "id": "ACoAACvhux4BK99bWRicmlZMVtqxRJZSxeitWh8",
+      "lastName": "Fu",
+      "firstName": "Elvin",
+      "linkedinUrl": "https://www.linkedin.com/in/fuelvin",
+      "publicIdentifier": "fuelvin"
+    },
+    {
+      "id": "ACoAAFC96sUBns1HXnKThC4Dk7MIz2g2zH9M0e8",
+      "lastName": "Yu",
+      "firstName": "Zachary",
+      "linkedinUrl": "https://www.linkedin.com/in/zacharyyu",
+      "publicIdentifier": "zacharyyu"
+    },
+    {
+      "id": "ACoAAEWA8mQB06xZFTP83PdEft07NiVjfrMfLeE",
+      "lastName": "Lenderking",
+      "firstName": "Inigo",
+      "linkedinUrl": "https://www.linkedin.com/in/inigolenderking",
+      "publicIdentifier": "inigolenderking"
+    },
+    {
+      "id": "ACoAACajl50BQ6PY0rmmWEXRuC2JYahfUYfww40",
+      "lastName": "Yenuganti",
+      "firstName": "Naren",
+      "linkedinUrl": "https://www.linkedin.com/in/narenyenuganti",
+      "publicIdentifier": "narenyenuganti"
+    },
+    {
+      "id": "ACoAADbyrAgBViW7Bn7N_TCVeSGXCsV-bA_dsqc",
+      "lastName": "Farruqui",
+      "firstName": "Simon",
+      "linkedinUrl": "https://www.linkedin.com/in/simonfarruqui",
+      "publicIdentifier": "simonfarruqui"
+    },
+    {
+      "id": "ACoAABaHWMoBJ2MQxizQ5Tp3lpUQeTtQgnV2fQQ",
+      "lastName": "Wang",
+      "firstName": "Shaocheng",
+      "linkedinUrl": "https://www.linkedin.com/in/shaocheng-wang-b766b7a6",
+      "publicIdentifier": "shaocheng-wang-b766b7a6"
+    },
+    {
+      "id": "ACoAAEIH_J0BIZD2VLjqU07Yu3IC_MVzu5UhKNs",
+      "lastName": "Hutchins",
+      "firstName": "Jibran",
+      "linkedinUrl": "https://www.linkedin.com/in/jibran-hutchins-42500b26b",
+      "publicIdentifier": "jibran-hutchins-42500b26b"
+    },
+    {
+      "id": "ACoAAD9tNzEB0Vl0A4ujL-Fht3JGNRPG0w0EACA",
+      "lastName": "Choudhury",
+      "firstName": "Dimittri",
+      "linkedinUrl": "https://www.linkedin.com/in/dimittrichoudhury",
+      "publicIdentifier": "dimittrichoudhury"
+    },
+    {
+      "id": "ACoAAAjnzY4Bjj6Krwhx6OJwpi1_l4i8_ckHEE0",
+      "lastName": "Mohler",
+      "firstName": "J.P.",
+      "linkedinUrl": "https://www.linkedin.com/in/jp-mohler",
+      "publicIdentifier": "jp-mohler"
+    },
+    {
+      "id": "ACoAAFJPb1wB7cZHQKSegVGMoFDk0rp2oG8RxHE",
+      "lastName": "Boehmer",
+      "firstName": "Shawn",
+      "linkedinUrl": "https://www.linkedin.com/in/shawn-boehmer",
+      "publicIdentifier": "shawn-boehmer"
+    },
+    {
+      "id": "ACoAAC0QPmUB40XX_9fZ1WfZvQXu3hy0k4t2Ztc",
+      "lastName": "Ganjikunta",
+      "firstName": "Amogh",
+      "linkedinUrl": "https://www.linkedin.com/in/amogh-ganjikunta-885242191",
+      "publicIdentifier": "amogh-ganjikunta-885242191"
+    },
+    {
+      "id": "ACoAAD3gIxgBukd0fZS2H6jcwuXCFkJJq6SjK5U",
+      "lastName": "Asavasaetakul",
+      "firstName": "Chawit",
+      "linkedinUrl": "https://www.linkedin.com/in/chawit-asavasaetakul-a487a724b",
+      "publicIdentifier": "chawit-asavasaetakul-a487a724b"
+    },
+    {
+      "id": "ACoAACXEucMBA5XW7ths7G947CuC6lRbb9WmT5k",
+      "lastName": "Ma",
+      "firstName": "Dylan",
+      "linkedinUrl": "https://www.linkedin.com/in/dylanma5621",
+      "publicIdentifier": "dylanma5621"
+    },
+    {
+      "id": "ACoAADvux8kB0QHNa-TSr2Mm-LQ7fFA83bK2hlg",
+      "lastName": "Wei",
+      "firstName": "Winston",
+      "linkedinUrl": "https://www.linkedin.com/in/winstonwei-wc",
+      "publicIdentifier": "winstonwei-wc"
+    },
+    {
+      "id": "ACoAACKjFAQBWXALPeV-ru0j4ufaQxDN0qeK9zc",
+      "lastName": "Malhotra",
+      "firstName": "Rhea",
+      "linkedinUrl": "https://www.linkedin.com/in/rhea-malhotra-198744142",
+      "publicIdentifier": "rhea-malhotra-198744142"
+    },
+    {
+      "id": "ACoAADEbrIEBP9qBnSYdpp5Z7JXE8D-3iV553RM",
+      "lastName": "Singh",
+      "firstName": "Dilzafer",
+      "linkedinUrl": "https://www.linkedin.com/in/dilzafersingh",
+      "publicIdentifier": "dilzafersingh"
+    },
+    {
+      "id": "ACoAACUO3-0BO9Au6tpmF0DoSTAn7ng1baij77I",
+      "lastName": "Bunas",
+      "firstName": "Sergey",
+      "linkedinUrl": "https://www.linkedin.com/in/s-bunas",
+      "publicIdentifier": "s-bunas"
+    },
+    {
+      "id": "ACoAAGSXD_oBQ3_IkJChEhARnS1Wzg15rkf1ZM4",
+      "lastName": "Feris",
+      "position": "Student at Harvard University",
+      "firstName": "Sherif feris",
+      "linkedinUrl": "https://www.linkedin.com/in/sherif-feris-feris-a762203b1",
+      "publicIdentifier": "sherif-feris-feris-a762203b1"
+    },
+    {
+      "id": "ACoAAGSR57wBC3Ts0jJItNX5-jbRAdiBBEizCtY",
+      "lastName": "Melaku",
+      "position": "Student at Harvard University",
+      "firstName": "Yonatan",
+      "linkedinUrl": "https://www.linkedin.com/in/yonatan-melaku-3640993b1",
+      "publicIdentifier": "yonatan-melaku-3640993b1"
+    },
+    {
+      "id": "ACoAAGSR9kYBjMtsu-oMVALHrc3Fn1zXnXcNaBI",
+      "lastName": "Mostafa",
+      "position": "Student at Harvard University",
+      "firstName": "Mohamed",
+      "linkedinUrl": "https://www.linkedin.com/in/mohamed-mostafa-54609b3b1",
+      "publicIdentifier": "mohamed-mostafa-54609b3b1"
+    },
+    {
+      "id": "ACoAAGSnPCEBwS5MD2wohDsVDSQsuSHgcCYenWE",
+      "lastName": "ENY",
+      "position": "Étudiant(e) à Harvard University",
+      "firstName": "DJESON",
+      "linkedinUrl": "https://www.linkedin.com/in/djeson-eny-2a96523b1",
+      "publicIdentifier": "djeson-eny-2a96523b1"
+    },
+    {
+      "id": "ACoAAGSSHSYBi_DJoD68oZM7oZ5rPWTww6tML6I",
+      "lastName": "Ehab",
+      "position": "الحسينيه",
+      "firstName": "Eman",
+      "linkedinUrl": "https://www.linkedin.com/in/eman-ehab-25a0a53b1",
+      "publicIdentifier": "eman-ehab-25a0a53b1"
+    },
+    {
+      "id": "ACoAAGShA_IBZIezsMmaDextGKJLO401ZuNb8ls",
+      "lastName": "undefined",
+      "position": "Student at Harvard University",
+      "firstName": "Jelly",
+      "linkedinUrl": "https://www.linkedin.com/in/jelly-undefined-4424963b1",
+      "publicIdentifier": "jelly-undefined-4424963b1"
+    },
+    {
+      "id": "ACoAAGSjE5oBvhjgP_I1uTffsQeW4hrqaH8RO8Y",
+      "lastName": "Abebe",
+      "position": "Student at Harvard University",
+      "firstName": "Zinaw",
+      "linkedinUrl": "https://www.linkedin.com/in/zinaw-abebe-64a5403b1",
+      "publicIdentifier": "zinaw-abebe-64a5403b1"
+    },
+    {
+      "id": "ACoAAGSbqU0BYDWl_t_TzVHUZmMfLolU6rYG5Ts",
+      "lastName": "saher",
+      "position": "Student at Harvard University",
+      "firstName": "hamza",
+      "linkedinUrl": "https://www.linkedin.com/in/hamza-saher-3793473b1",
+      "publicIdentifier": "hamza-saher-3793473b1"
+    },
+    {
+      "id": "ACoAAGSzUdwB_ff5AlC-OeoQ5lk1OQ1GNGmx0Ko",
+      "lastName": "Tesfaye",
+      "position": "Student at Harvard University",
+      "firstName": "Eyael",
+      "linkedinUrl": "https://www.linkedin.com/in/eyael-tesfaye-6a49743b1",
+      "publicIdentifier": "eyael-tesfaye-6a49743b1"
+    },
+    {
+      "id": "ACoAAGSRFkEBD_p8yr6S31cbI79hf0fljDUvP_4",
+      "lastName": "To",
+      "position": "Student at plapoly",
+      "firstName": "Mokøn",
+      "linkedinUrl": "https://www.linkedin.com/in/mokøn-to-3150723b1",
+      "publicIdentifier": "mokøn-to-3150723b1"
+    }
+  ],
+  "publications": [],
+  "registeredAt": "2023-12-04T19:21:21.205Z",
+  "volunteering": [],
+  "followerCount": 1468,
+  "originalQuery": {
+    "query": "https://www.linkedin.com/in/armand-iorgulescu-21b6462a3"
+  },
+  "primaryLocale": {
+    "country": "US",
+    "language": "en"
+  },
+  "certifications": [],
+  "profileActions": [
+    {
+      "url": "https://www.fed10.ai",
+      "label": "Visit my website",
+      "openExternally": true
+    }
+  ],
+  "profileLocales": [
+    {
+      "country": "US",
+      "language": "en"
+    }
+  ],
+  "profilePicture": {
+    "url": "https://media.licdn.com/dms/image/v2/D5603AQHE8TRANQPyVA/profile-displayphoto-shrink_800_800/B56ZXklGLEGUAc-/0/1743296685131?e=1774483200&v=beta&t=map0R6t5Xb0eIyfoO0ne3bwD_NqvsJHmteEa_pNXvRs",
+    "sizes": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQHE8TRANQPyVA/profile-displayphoto-shrink_800_800/B56ZXklGLEGUAc-/0/1743296685131?e=1774483200&v=beta&t=map0R6t5Xb0eIyfoO0ne3bwD_NqvsJHmteEa_pNXvRs",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1774483200000
+      },
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQHE8TRANQPyVA/profile-displayphoto-shrink_400_400/B56ZXklGLEGUAg-/0/1743296685122?e=1774483200&v=beta&t=dGT7gi-ObOBnjZgpAoa9yfjAUvM8ofsSP4mT_pItk0Q",
+        "width": 400,
+        "height": 400,
+        "expiresAt": 1774483200000
+      },
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQHE8TRANQPyVA/profile-displayphoto-shrink_200_200/B56ZXklGLEGUAY-/0/1743296685131?e=1774483200&v=beta&t=TjrEUJLWENyAmMoRqDpJTXmnuAIdsJ-zKd9ilZOtIOQ",
+        "width": 200,
+        "height": 200,
+        "expiresAt": 1774483200000
+      },
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQHE8TRANQPyVA/profile-displayphoto-shrink_100_100/B56ZXklGLEGUAU-/0/1743296685131?e=1774483200&v=beta&t=gR5k1LObgb4wC0_x4pLioSFzgP9OQ05m2_2A0q8RIoU",
+        "width": 100,
+        "height": 100,
+        "expiresAt": 1774483200000
+      }
+    ]
+  },
+  "currentPosition": [
+    {
+      "companyId": "108147781",
+      "dateRange": {
+        "end": null,
+        "start": {
+          "day": null,
+          "year": 2025,
+          "month": 8
+        }
+      },
+      "companyName": "Fed10",
+      "companyLinkedinUrl": "https://www.linkedin.com/company/108147781/"
+    }
+  ],
+  "honorsAndAwards": [],
+  "connectionsCount": 1304,
+  "publicIdentifier": "armand-iorgulescu",
+  "composeOptionType": "UPSELL",
+  "profileTopEducation": [
+    {
+      "schoolId": "18483",
+      "companyId": "1646",
+      "schoolName": "Harvard University",
+      "schoolLinkedinUrl": "https://www.linkedin.com/company/1646/"
+    }
+  ],
+  "receivedRecommendations": []
+}

@@ -1,5 +1,6 @@
 export interface YamlOptions {
   maxDepth?: number;
+  omitNull?: boolean;
 }
 
 function needsQuotes(value: string): boolean {
@@ -22,7 +23,7 @@ function yamlStringValue(value: string): string {
   return value;
 }
 
-function serializeValue(value: unknown, indent: number): string {
+function serializeValue(value: unknown, indent: number, omitNull = false): string {
   const pad = " ".repeat(indent);
 
   if (value === null) return "null";
@@ -37,26 +38,28 @@ function serializeValue(value: unknown, indent: number): string {
       (v) => v === null || typeof v !== "object"
     );
     if (allPrimitive) {
-      const items = value.map((v) => serializeValue(v, 0));
+      const items = value.map((v) => serializeValue(v, 0, omitNull));
       return `[${items.join(", ")}]`;
     }
     // Block style for complex arrays
     const lines: string[] = [];
     for (const item of value) {
       if (item !== null && typeof item === "object" && !Array.isArray(item)) {
-        const obj = item as Record<string, unknown>;
-        const entries = Object.entries(obj);
+        let entries = Object.entries(item as Record<string, unknown>);
+        if (omitNull) {
+          entries = entries.filter(([, v]) => v !== null && v !== undefined);
+        }
         if (entries.length === 0) {
           lines.push(`${pad}- {}`);
         } else {
           const [firstKey, firstVal] = entries[0]!;
-          lines.push(`${pad}- ${firstKey}: ${serializeValue(firstVal, indent + 2)}`);
+          lines.push(`${pad}- ${firstKey}: ${serializeValue(firstVal, indent + 2, omitNull)}`);
           for (const [k, v] of entries.slice(1)) {
-            lines.push(`${pad}  ${k}: ${serializeValue(v, indent + 2)}`);
+            lines.push(`${pad}  ${k}: ${serializeValue(v, indent + 2, omitNull)}`);
           }
         }
       } else {
-        lines.push(`${pad}- ${serializeValue(item, 0)}`);
+        lines.push(`${pad}- ${serializeValue(item, 0, omitNull)}`);
       }
     }
     return "\n" + lines.join("\n");
@@ -64,11 +67,14 @@ function serializeValue(value: unknown, indent: number): string {
 
   if (typeof value === "object") {
     const obj = value as Record<string, unknown>;
-    const entries = Object.entries(obj);
+    let entries = Object.entries(obj);
+    if (omitNull) {
+      entries = entries.filter(([, v]) => v !== null && v !== undefined);
+    }
     if (entries.length === 0) return "{}";
     const lines: string[] = [];
     for (const [k, v] of entries) {
-      const serialized = serializeValue(v, indent + 2);
+      const serialized = serializeValue(v, indent + 2, omitNull);
       if (serialized.startsWith("\n")) {
         lines.push(`${pad}${k}:${serialized}`);
       } else {
@@ -81,27 +87,31 @@ function serializeValue(value: unknown, indent: number): string {
   return String(value);
 }
 
-export function toYaml(data: unknown, _opts?: YamlOptions): string {
+export function toYaml(data: unknown, opts?: YamlOptions): string {
+  const omitNull = opts?.omitNull ?? false;
+
   if (Array.isArray(data)) {
     if (data.length === 0) return "";
 
     const lines: string[] = [];
     for (const item of data) {
       if (item !== null && typeof item === "object" && !Array.isArray(item)) {
-        const obj = item as Record<string, unknown>;
-        const entries = Object.entries(obj);
+        let entries = Object.entries(item as Record<string, unknown>);
+        if (omitNull) {
+          entries = entries.filter(([, v]) => v !== null && v !== undefined);
+        }
         if (entries.length === 0) {
           lines.push("- {}");
         } else {
           const [firstKey, firstVal] = entries[0]!;
-          const serialized = serializeValue(firstVal, 4);
+          const serialized = serializeValue(firstVal, 4, omitNull);
           if (serialized.startsWith("\n")) {
             lines.push(`- ${firstKey}:${serialized}`);
           } else {
             lines.push(`- ${firstKey}: ${serialized}`);
           }
           for (const [k, v] of entries.slice(1)) {
-            const s = serializeValue(v, 4);
+            const s = serializeValue(v, 4, omitNull);
             if (s.startsWith("\n")) {
               lines.push(`  ${k}:${s}`);
             } else {
@@ -110,7 +120,7 @@ export function toYaml(data: unknown, _opts?: YamlOptions): string {
           }
         }
       } else {
-        lines.push(`- ${serializeValue(item, 0)}`);
+        lines.push(`- ${serializeValue(item, 0, omitNull)}`);
       }
     }
     return lines.join("\n");
@@ -118,11 +128,14 @@ export function toYaml(data: unknown, _opts?: YamlOptions): string {
 
   if (data !== null && typeof data === "object") {
     const obj = data as Record<string, unknown>;
-    const entries = Object.entries(obj);
+    let entries = Object.entries(obj);
+    if (omitNull) {
+      entries = entries.filter(([, v]) => v !== null && v !== undefined);
+    }
     if (entries.length === 0) return "{}";
     const lines: string[] = [];
     for (const [k, v] of entries) {
-      const serialized = serializeValue(v, 2);
+      const serialized = serializeValue(v, 2, omitNull);
       if (serialized.startsWith("\n")) {
         lines.push(`${k}:${serialized}`);
       } else {
@@ -133,5 +146,5 @@ export function toYaml(data: unknown, _opts?: YamlOptions): string {
   }
 
   // Scalar
-  return serializeValue(data, 0);
+  return serializeValue(data, 0, omitNull);
 }
