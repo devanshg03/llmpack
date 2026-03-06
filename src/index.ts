@@ -69,7 +69,7 @@ function applyFormatter(
     case "json-compact":
       return JSON.stringify(data);
     case "hybrid":
-      return toHybrid(data);
+      return toHybrid(data, { omitNull });
   }
 }
 

@@ -39,16 +39,24 @@ function isObjectMap(obj: Record<string, unknown>): boolean {
 
 /** Converts an object-map to TOON by prepending the map key as the `name` column. */
 function objectMapToToon(obj: Record<string, unknown>): string {
-  const rows = Object.entries(obj).map(([k, v]) => ({ name: k, ...(v as object) }));
+  const rows = Object.entries(obj).map(([k, v]) => {
+    const { name: _dropped, ...rest } = v as Record<string, unknown>;
+    return { name: k, ...rest };
+  });
   return toToon(rows);
 }
 
-export function toHybrid(data: unknown): string {
-  if (Array.isArray(data)) return hybridArray(data);
+export interface HybridOptions {
+  omitNull?: boolean;
+}
+
+export function toHybrid(data: unknown, opts?: HybridOptions): string {
+  const omitNull = opts?.omitNull ?? false;
+  if (Array.isArray(data)) return hybridArray(data, omitNull);
   if (data !== null && typeof data === "object") {
-    return hybridObjectParts(data as Record<string, unknown>, "", 0, 4).join("\n\n");
+    return hybridObjectParts(data as Record<string, unknown>, "", 0, 4, undefined, omitNull).join("\n\n");
   }
-  return toYaml(data);
+  return toYaml(data, { omitNull });
 }
 
 /**
@@ -64,7 +72,8 @@ function hybridObjectParts(
   prefix: string,
   depth: number,
   maxDepth: number,
-  sectionHeader?: string
+  sectionHeader?: string,
+  omitNull = false
 ): string[] {
   const scalarObj: Record<string, unknown> = {};
   const sections: string[] = [];
@@ -96,7 +105,7 @@ function hybridObjectParts(
         if (score >= 0.7) {
           sections.push(`## ${fullPath} [toon]\n${toToon(arr)}`);
         } else {
-          sections.push(`## ${fullPath} [yaml]\n${toYaml(arr)}`);
+          sections.push(`## ${fullPath} [yaml]\n${toYaml(arr, { omitNull })}`);
         }
       }
     } else {
@@ -105,17 +114,17 @@ function hybridObjectParts(
       if (isObjectMap(nestedObj)) {
         sections.push(`## ${fullPath} [toon]\n${objectMapToToon(nestedObj)}`);
       } else if (depth < maxDepth) {
-        const innerParts = hybridObjectParts(nestedObj, `${fullPath}.`, depth + 1, maxDepth, fullPath);
+        const innerParts = hybridObjectParts(nestedObj, `${fullPath}.`, depth + 1, maxDepth, fullPath, omitNull);
         sections.push(...innerParts);
       } else {
-        sections.push(`## ${fullPath} [yaml]\n${toYaml(value)}`);
+        sections.push(`## ${fullPath} [yaml]\n${toYaml(value, { omitNull })}`);
       }
     }
   }
 
   const parts: string[] = [];
   if (Object.keys(scalarObj).length > 0) {
-    const yaml = toYaml(scalarObj);
+    const yaml = toYaml(scalarObj, { omitNull });
     if (sectionHeader !== undefined) {
       parts.push(`## ${sectionHeader} [yaml]\n${yaml}`);
     } else {
@@ -126,7 +135,7 @@ function hybridObjectParts(
   return parts;
 }
 
-function hybridArray(data: unknown[]): string {
+function hybridArray(data: unknown[], omitNull = false): string {
   if (data.length === 0) return "";
 
   // Collect all column names
@@ -198,7 +207,7 @@ function hybridArray(data: unknown[]): string {
           if (objects.length > 0 && getUniformityScore(objects) >= 0.7) {
             parts.push(`## row[${i}].${key} [toon]\n${toToon(val)}`);
           } else {
-            parts.push(`## row[${i}].${key} [yaml]\n${toYaml(val)}`);
+            parts.push(`## row[${i}].${key} [yaml]\n${toYaml(val, { omitNull })}`);
           }
         }
       } else if (typeof val === "object") {
@@ -207,7 +216,7 @@ function hybridArray(data: unknown[]): string {
           ([, v]) => v !== null && v !== undefined
         );
         if (entries.length > 0) {
-          parts.push(`## row[${i}].${key} [yaml]\n${toYaml(val)}`);
+          parts.push(`## row[${i}].${key} [yaml]\n${toYaml(val, { omitNull })}`);
         }
       }
     }
