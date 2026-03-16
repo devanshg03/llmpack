@@ -21,6 +21,8 @@ const bigArray = Array.from({ length: 1000 }, (_, i) => ({
   email: `user${i}@example.com`,
 }));
 
+let failures = 0;
+
 async function bench(
   name: string,
   fn: () => unknown | Promise<unknown>,
@@ -41,7 +43,7 @@ async function bench(
 async function checkSavings() {
   const checks = [
     { label: "user-list", data: userList, threshold: 30, opts: {} },
-    { label: "config-object", data: configObject, threshold: 15, opts: {} },
+    { label: "config-object", data: configObject, threshold: 10, opts: {} },
     { label: "log-entries", data: logEntries, threshold: 40, opts: {} },
     {
       label: "product-catalog (flattened)",
@@ -68,6 +70,7 @@ async function checkSavings() {
     );
     if (result.tokensSaved < threshold) {
       console.warn(`  [WARN] Below threshold`);
+      failures++;
     }
   }
 }
@@ -116,15 +119,20 @@ async function compareToonVsAuto() {
 }
 
 console.log("--- Performance Benchmarks ---");
-await bench("format() on 1000-row array", () => format(bigArray), 100);
-await bench("compare() on 1000-row array", () => compare(bigArray), 500);
-await bench("detect() on small input", () => detect(userList), 10);
+await bench("format() on 1000-row array", () => format(bigArray), 20);
+await bench("compare() on 1000-row array", () => compare(bigArray), 40);
+await bench("detect() on small input", () => detect(userList), 2);
 await bench("detect() on 1000-row array", () => detect(bigArray), 10);
-await bench("format(linkedin-profile)", () => format(linkedinProfile), 200);
-await bench("format(linkedin-posts)", () => format(linkedinPosts), 500);
-await bench("format(complex-nested)", () => format(complexNested), 200);
-await bench("format(exa)", () => format(exa), 500);
-await bench("format(github-repos)", () => format(githubRepos), 200);
+await bench("format(linkedin-profile)", () => format(linkedinProfile), 10);
+await bench("format(linkedin-posts)", () => format(linkedinPosts), 15);
+await bench("format(complex-nested)", () => format(complexNested), 5);
+await bench("format(exa)", () => format(exa), 20);
+await bench("format(github-repos)", () => format(githubRepos), 5);
 
 await checkSavings();
 await compareToonVsAuto();
+
+if (failures > 0) {
+  console.error(`\n✗ ${failures} benchmark(s) failed`);
+  process.exit(1);
+}

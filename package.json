@@ -1,8 +1,9 @@
 {
   "name": "llmpack",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha.0",
   "description": "Auto-detect data shape and format it into the most token-efficient representation for LLM prompts",
   "keywords": ["llm", "tokens", "format", "prompt", "ai", "csv", "yaml", "toon"],
+  "author": "Devansh Gandhi",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
