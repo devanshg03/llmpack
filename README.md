@@ -1,18 +1,18 @@
-# llmpack
+# llmpress
 
 Auto-detects your data's shape and converts it to the most token-efficient format for LLM prompts. Feed it anything — arrays, objects, nested structures — and get back a compact string representation along with token savings stats.
 
 ## Install
 
 ```bash
-bun add llmpack
-# or: npm install llmpack
+bun add llmpress
+# or: npm install llmpress
 ```
 
 ## Quick Start
 
 ```ts
-import { format } from "llmpack";
+import { format } from "llmpress";
 
 const users = [
   { id: 1, name: "Alice", role: "admin", active: true },
@@ -101,7 +101,7 @@ const results = await compare(users);
 Inspect data shape without formatting.
 
 ```ts
-import { detect } from "llmpack";
+import { detect } from "llmpress";
 
 const info = detect(users);
 // {
@@ -120,7 +120,7 @@ const info = detect(users);
 All formatters are exported for direct use:
 
 ```ts
-import { toToon, toYaml, toCsv, toTsv, toMarkdownTable } from "llmpack";
+import { toToon, toYaml, toCsv, toTsv, toMarkdownTable } from "llmpress";
 
 toToon(data, options?)
 toYaml(data, options?)

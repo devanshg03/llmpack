@@ -1,6 +1,6 @@
-# Contributing to llmpack
+# Contributing to llmpress
 
-Thanks for your interest in contributing to llmpack.
+Thanks for your interest in contributing to llmpress.
 
 ## Prerequisites
 
@@ -11,8 +11,8 @@ Thanks for your interest in contributing to llmpack.
 
 1. Fork and clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/llmpack.git
-   cd llmpack
+   git clone https://github.com/YOUR_USERNAME/llmpress.git
+   cd llmpress
    ```
 
 2. Install dependencies:

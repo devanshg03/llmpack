@@ -1,5 +1,5 @@
 {
-  "name": "llmpack",
+  "name": "llmpress",
   "version": "0.1.0-alpha.0",
   "description": "Auto-detect data shape and format it into the most token-efficient representation for LLM prompts",
   "keywords": ["llm", "tokens", "format", "prompt", "ai", "csv", "yaml", "toon"],
@@ -11,12 +11,12 @@
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/devanshg03/llmpack.git"
+    "url": "https://github.com/devanshg03/llmpress.git"
   },
   "bugs": {
-    "url": "https://github.com/devanshg03/llmpack/issues"
+    "url": "https://github.com/devanshg03/llmpress/issues"
   },
-  "homepage": "https://github.com/devanshg03/llmpack#readme",
+  "homepage": "https://github.com/devanshg03/llmpress#readme",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

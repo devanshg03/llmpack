@@ -13,7 +13,7 @@
 
 Instead, report them by one of these methods:
 
-1. **GitHub Security Advisories**: Open a [security advisory](https://github.com/devanshg03/llmpack/security/advisories/new) in this repository.
+1. **GitHub Security Advisories**: Open a [security advisory](https://github.com/devanshg03/llmpress/security/advisories/new) in this repository.
 2. **Email**: Contact the maintainer(s) via the email listed in your git config for commits in this repo, or via GitHub profile if available.
 
 Include as much of the following as possible:
